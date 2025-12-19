@@ -1,7 +1,7 @@
 {
   "name": "agenda-semanal-arcanjos",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
 "dependencies": {
     "react": "^18.3.1",
