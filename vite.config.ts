@@ -4,8 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
   plugins: [
-    // Aqui está o segredo: forçamos o modo 'classic' para parar de buscar o jsx-runtime
-    react({ jsxRuntime: 'classic' }), 
+    react(), // <--- MUDOU AQUI: removemos o { jsxRuntime: 'classic' }
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
