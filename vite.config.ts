@@ -3,9 +3,14 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      // ESTA É A CORREÇÃO: Ensinamos o Vite onde encontrar o arquivo fantasma
+      'react/jsx-runtime': 'react/jsx-runtime.js',
+    },
+  },
   plugins: [
-    // ADICIONE { jsxRuntime: 'classic' } AQUI
-    react({ jsxRuntime: 'classic' }), 
+    react(), // Voltamos ao padrão (sem 'classic')
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],

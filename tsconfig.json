@@ -6,14 +6,13 @@
     "module": "ESNext",
     "skipLibCheck": true,
     
-    "moduleResolution": "bundler", 
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     
-    // MUDE ESTA LINHA PARA "react"
-    "jsx": "react", 
+    "jsx": "react-jsx",
     
     "strict": true,
     "noUnusedLocals": true,
