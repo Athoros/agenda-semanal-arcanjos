@@ -2,7 +2,7 @@
   "crons": [
     {
       "path": "/api/trigger-reset?secret=${process.env.CRON_SECRET}",
-      "schedule": "0 22 * * 5"
+      "schedule": "0 15 * * 6"
     }
   ]
 }
