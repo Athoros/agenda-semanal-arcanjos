@@ -2,10 +2,10 @@ name: Reset Automático da Agenda
 
 on:
   schedule:
-    # 20:30 UTC equivale a 17:30 no Rio de Janeiro
-    # 6 = Sábado
-    - cron: '30 20 * * 6'
-  workflow_dispatch: # Permite testar clicando no botão "Run workflow"
+    # 22:00 UTC = 19:00 Horário de Brasília
+    # 5 = Sexta-feira
+    - cron: '0 22 * * 5'
+  workflow_dispatch: # Mantém o botão de teste manual caso precise
 
 jobs:
   reset-job:
@@ -13,6 +13,5 @@ jobs:
     steps:
       - name: Disparar Reset no Vercel
         run: |
-          # O comando abaixo acessa o link do reset
-          # Substitua SUA_SENHA_AQUI pela sua senha real
+          # Substitua 123456 pela sua senha real configurada no Vercel
           curl -L -f "https://agenda-semanal-arcanjos.vercel.app/api/trigger-reset?secret=123456"
